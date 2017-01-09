@@ -1,0 +1,14 @@
+MOV R4  ,10 ;count
+MOV R4, R1
+MOV R1, R3
+MOV R2, 0   ;asdasdsa
+ADD R2, R3
+SUB R1, 1
+JMP R1, 9 ; asdas
+JMP 5 ; asdasd
+ADD R5, R2
+SUB R4, 1
+JMP R4, 13
+JMP 2
+PRN R5
+HLT   ;   sadsfqw

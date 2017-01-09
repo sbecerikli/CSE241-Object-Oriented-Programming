@@ -1,0 +1,78 @@
+MOV #1, 30
+MOV #2, 23
+MOV #3, 4
+MOV #4, 56
+MOV #5, 34
+MOV #6, 56
+MOV #7, 89
+MOV #8, 32
+MOV #9, 45
+MOV #10, 25
+MOV R4, 10   	; 10 luk döngü kurmak için 
+MOV #1, R1			
+MOV #2, R2
+MOV R1, R3		
+SUB R1, R2  	; r1(#1) = r1(#1) - r2(#2)
+JPN R1, 19		; if #1 <= #2 go to Line 19 (don't swap)
+MOV R2, #1		; swap
+MOV R3, #2		; swap
+MOV #2, R1
+MOV #3, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#2) = r1(#2) - r2(#3)    
+JPN R1, 26		; if #2 <= #3 go to Line 19 (don't swap)
+MOV R2, #2		; swap
+MOV R3, #3		; swap
+MOV #3, R1
+MOV #4, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#3) = r1(#3) - r2(#4)
+JPN R1, 33		; if #3 <= #4 go to Line 19 (don't swap)
+MOV R2, #3		; swap
+MOV R3, #4		; swap
+MOV #4, R1
+MOV #5, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#4) = r1(#4) - r2(#5)
+JPN R1, 40		; if #4 <= #5 go to Line 19 (don't swap)
+MOV R2, #4		; swap
+MOV R3, #5		; swap
+MOV #5, R1
+MOV #6, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#5) = r1(#5) - r2(#6)
+JPN R1, 47		; if #5 <= #6 go to Line 47 (don't swap)
+MOV R2, #5		; swap
+MOV R3, #6		; swap
+MOV #6, R1
+MOV #7, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#6) = r1(#6) - r2(#7)
+JPN R1, 54		; if #6 <= #7 go to Line 54 (don't swap)
+MOV R2, #6		; swap
+MOV R3, #7		; swap
+MOV #7, R1
+MOV #8, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#7) = r1(#7) - r2(#8)
+JPN R1, 61		; if #7 <= #8 go to Line 61 (don't swap)
+MOV R2, #7		; swap
+MOV R3, #8		; swap
+MOV #8, R1
+MOV #9, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#8) = r1(#8) - r2(#9)
+JPN R1, 68		; if #8 <= #9 go to Line 68 (don't swap)
+MOV R2, #8		; swap
+MOV R3, #9		; swap
+MOV #9, R1
+MOV #10, R2
+MOV R1, R3
+SUB R1, R2  	; r1(#9) = r1(#9) - r2(#10)
+JPN R1, 75		; if #9 <= #10 go to Line 75 (don't swap)
+MOV R2, #9		; swap
+MOV R3, #10		; swap
+SUB R4, 1
+JPN R4, 78		; döngü kontrol. 10 kere döndüyse bitir
+JMP 12			; döngü 10 kere dönmediyse döngünün basına dön
+HLT
